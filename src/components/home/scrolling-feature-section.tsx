@@ -30,7 +30,7 @@ export default function ScrollingFeatureSection() {
           <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Services</h2>
           <p className="text-lg text-muted-foreground mt-2">Tailored photography services to meet your needs.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (

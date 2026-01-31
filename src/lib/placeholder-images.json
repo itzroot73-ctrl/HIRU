@@ -8,62 +8,62 @@
     },
     {
       "id": "gallery-1",
-      "description": "A photographer holding a camera, ready for a shoot.",
-      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzcwMjQxMzU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photographer camera"
+      "description": "A professional photographer adjusting their camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1707377769044-aa86fcccf5ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoZXIlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzY5ODU0NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photographer professional"
     },
     {
       "id": "gallery-2",
-      "description": "A beautiful bride in a white dress at her Sri Lankan wedding.",
-      "imageUrl": "https://images.unsplash.com/photo-1597157639070-691017c124e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYW4lMjB3ZWRkaW5nfGVufDB8fHx8MTc3MDI0MTQ0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "sri lankan wedding"
-    },
-    {
-      "id": "gallery-3",
-      "description": "A close-up of a bride and groom's hands with wedding rings.",
-      "imageUrl": "https://images.unsplash.com/photo-1598435332569-32338c2386da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcmluZ3N8ZW58MHx8fHwxNzcwMjQxNDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wedding rings"
-    },
-    {
-      "id": "gallery-4",
-      "description": "A joyous wedding couple celebrating on a beach.",
-      "imageUrl": "https://images.unsplash.com/photo-1606490194859-07c18c9f0968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGNvdXBsZXxlbnwwfHx8fDE3Njk4MzM2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A happy couple on their wedding day.",
+      "imageUrl": "https://images.unsplash.com/photo-1618566864264-fb013f791da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding couple"
     },
     {
+      "id": "gallery-3",
+      "description": "A beautiful wedding ceremony setup.",
+      "imageUrl": "https://images.unsplash.com/photo-1723832347953-83c28e2d4dd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY5ODMyMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding ceremony"
+    },
+    {
+      "id": "gallery-4",
+      "description": "A close-up of wedding rings.",
+      "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcmluZ3N8ZW58MHx8fHwxNzY5ODMzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding rings"
+    },
+    {
       "id": "gallery-5",
-      "description": "A tender moment between a bride and groom during their wedding portrait session.",
-      "imageUrl": "https://images.unsplash.com/photo-1616041951664-9a11735a2979?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc3MDI0MTU5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wedding portrait"
+      "description": "Guests celebrating at a wedding reception.",
+      "imageUrl": "https://images.unsplash.com/photo-1595407753234-0882f1e77954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc2OTgwNDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding reception"
     },
     {
       "id": "gallery-6",
-      "description": "A stunning portrait of a Sri Lankan woman with traditional jewelry.",
-      "imageUrl": "https://images.unsplash.com/photo-1619241995804-122e37c4e43f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYW4lMjB3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc3MDI0MTY1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A portrait of a woman in a beautiful Sri Lankan setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1751647233941-39696d993fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3JpJTIwbGFua2ElMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NTQ1NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sri lanka portrait"
     },
     {
       "id": "about-photographer",
-      "description": "Portrait of a photographer holding a camera",
-      "imageUrl": "https://images.unsplash.com/photo-1607332897173-885f1b27e7a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90b2dyYXBoZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3MzE5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photographer portrait"
+      "description": "Portrait of a creative photographer.",
+      "imageUrl": "https://images.unsplash.com/photo-1614957453611-d90f8b754f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaG90b2dyYXBoZXIlMjBhcnRpc3R8ZW58MHx8fHwxNzY5ODU0NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photographer artist"
     },
     {
       "id": "feature-wedding",
       "description": "A bride and groom at their wedding ceremony",
-      "imageUrl": "https://images.unsplash.com/photo-1606490194859-07c18c9f0968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGNvdXBsZXxlbnwwfHx8fDE3Njk4MzM2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding couple"
     },
     {
       "id": "feature-portrait",
       "description": "A stunning close-up portrait of a woman",
-      "imageUrl": "https://images.unsplash.com/photo-1542513217-0b0eedf7005d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmFzaGlvbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTg0ODExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597573783009-4b9c914107da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYXNoaW9uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5ODQ4MTE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "fashion portrait"
     },
     {
       "id": "feature-event",
       "description": "A crowd at a vibrant music festival",
-      "imageUrl": "https://images.unsplash.com/photo-1760822396928-16d84eabb94e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxldmVudCUyMGZlc3RpdmFsfGVufDB8fHx8MTc2OTg0ODExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1766470611914-58add0b04f67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxldmVudCUyMGZlc3RpdmFsfGVufDB8fHx8MTc2OTg0ODExNXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "event festival"
     }
   ]

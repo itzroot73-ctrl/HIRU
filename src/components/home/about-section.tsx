@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative aspect-square opacity-0 animate-fade-in-up">
             {photographerImage && (
               <Image

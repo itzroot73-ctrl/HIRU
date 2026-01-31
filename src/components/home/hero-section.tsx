@@ -16,12 +16,12 @@ export default function HeroSection() {
         <source src="https://storage.googleapis.com/aifirebase-75fb8.appspot.com/videos%2Fphotographer_video.mp4" type="video/mp4" />
       </video>
       <div className="container relative z-10 flex h-full items-center justify-center text-center">
-        <div className="space-y-6 opacity-0 animate-fade-in-up">
+        <div className="max-w-3xl mx-auto space-y-6 opacity-0 animate-fade-in-up">
           <span className="text-accent font-semibold tracking-wider uppercase">Timeless Photography</span>
           <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-white">
             Capturing Moments, Creating Art
           </h1>
-          <p className="max-w-xl text-lg md:text-xl text-neutral-300 mx-auto">
+          <p className="text-lg md:text-xl text-neutral-300">
             I turn your special moments into timeless works of art. Based in Sri Lanka, I specialize in telling stories through beautiful, high-quality photographs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
