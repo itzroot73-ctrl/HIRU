@@ -10,6 +10,7 @@ import {
   SheetClose,
   SheetContent,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from '@/components/ui/button';
@@ -65,6 +66,7 @@ export default function Header() {
                     </SheetTrigger>
                     <SheetContent side="right" className="w-[300px]">
                         <SheetHeader className="mb-8 text-left">
+                            <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                             <Logo />
                         </SheetHeader>
                         <nav className="flex flex-col items-start space-y-6">
