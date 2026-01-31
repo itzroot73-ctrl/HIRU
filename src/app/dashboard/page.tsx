@@ -41,14 +41,14 @@ export default function DashboardPage() {
       <Header />
       <main className="flex-grow container py-12 md:py-16">
         <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center">
+            <div className="text-center opacity-0 animate-fade-in-up">
                 <h1 className="text-4xl md:text-5xl font-bold font-headline">Welcome, {firstName}!</h1>
                 <p className="mt-2 text-lg text-muted-foreground">We're glad to have you here. Explore your options or view our work.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4">
                 {dashboardImages.map((image, index) => (
-                    <div key={image.id} className="rounded-lg overflow-hidden shadow-lg opacity-0 animate-fade-in-up" style={{ animationDelay: `${100 * index}ms` }}>
+                    <div key={image.id} className="rounded-lg overflow-hidden shadow-lg opacity-0 animate-fade-in-up" style={{ animationDelay: `${100 * (index + 1)}ms` }}>
                         <Image
                             src={image.imageUrl}
                             alt={image.description}
@@ -61,7 +61,18 @@ export default function DashboardPage() {
                 ))}
             </div>
 
-            <Card className="bg-card/60">
+            <Card className="bg-card/60 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+                <CardHeader>
+                    <CardTitle className="text-center">Our Mission: Art in Every Frame</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center text-foreground/80">
+                    <p>
+                    We believe that every photograph is more than just an image; it's a chapter in your story waiting to be told. Our mission is to artfully capture the genuine emotion and fleeting beauty of your most cherished moments. With a blend of creativity and precision, we turn your precious memories into timeless works of art that you can treasure for a lifetime.
+                    </p>
+                </CardContent>
+            </Card>
+
+            <Card className="bg-card/60 opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
                 <CardHeader>
                     <CardTitle className="text-center">Next Steps</CardTitle>
                 </CardHeader>
