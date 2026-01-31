@@ -1,6 +1,6 @@
 'use client';
 
-import { Sparkles } from 'lucide-react';
+import Logo from '@/components/logo';
 
 interface LoadingScreenProps {
   loading: boolean;
@@ -14,11 +14,10 @@ export default function LoadingScreen({ loading }: LoadingScreenProps) {
       }`}
       aria-hidden={!loading}
     >
-      <div className="relative flex items-center justify-center h-48 w-48">
-        <div className="absolute h-full w-full rounded-full bg-accent animate-fill-and-fade" />
-        <Sparkles className="h-24 w-24 text-accent-foreground animate-pulse" />
-        <span className="sr-only">Loading...</span>
+      <div className="animate-pulse-strong">
+        <Logo />
       </div>
+      <span className="sr-only">Loading...</span>
     </div>
   );
 }
