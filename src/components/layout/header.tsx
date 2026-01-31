@@ -4,15 +4,20 @@ import Link from 'next/link';
 import { useUser } from '@/firebase';
 import Logo from '@/components/logo';
 import AuthButton from '@/components/auth/auth-button';
-
-const navLinks = [
-    { href: "/#services", label: "Services" },
-    { href: "/#gallery", label: "Gallery" },
-    { href: "/#about", label: "About" },
-];
+import { ThemeToggle } from '@/components/theme-toggle';
+import { LanguageToggle } from '@/components/language-toggle';
+import { useTranslation } from '@/hooks/use-translation';
 
 export default function Header() {
     const { user } = useUser();
+    const { t } = useTranslation();
+
+    const navLinks = [
+        { href: "/#services", label: t('header.services') },
+        { href: "/#gallery", label: t('header.gallery') },
+        { href: "/#about", label: t('header.about') },
+    ];
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
@@ -26,24 +31,28 @@ export default function Header() {
             {user && (
                  <>
                     <Link href="/dashboard" className="text-foreground/70 transition-colors hover:text-foreground">
-                        Dashboard
+                        {t('header.dashboard')}
                     </Link>
                     <Link href="/services" className="text-foreground/70 transition-colors hover:text-foreground">
-                        Packages
+                        {t('header.packages')}
                     </Link>
                     <Link href="/payments" className="text-foreground/70 transition-colors hover:text-foreground">
-                        Payments
+                        {t('header.payments')}
                     </Link>
                     <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
-                        Feedback
+                        {t('header.feedback')}
                     </Link>
                 </>
             )}
         </nav>
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex flex-1 items-center justify-end space-x-2">
+            <LanguageToggle />
+            <ThemeToggle />
             <AuthButton />
         </div>
       </div>
     </header>
   );
 }
+
+    

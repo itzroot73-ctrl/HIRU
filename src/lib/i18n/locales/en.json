@@ -1,0 +1,22 @@
+{
+  "header": {
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "dashboard": "Dashboard",
+    "packages": "Packages",
+    "payments": "Payments",
+    "feedback": "Feedback"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {{name}}!",
+    "description": "We're glad to have you here. Explore your options or view our work.",
+    "missionTitle": "Our Mission: Art in Every Frame",
+    "missionDescription": "We believe that every photograph is more than just an image; it's a chapter in your story waiting to be told. Our mission is to artfully capture the genuine emotion and fleeting beauty of your most cherished moments. With a blend of creativity and precision, we turn your precious memories into timeless works of art that you can treasure for a lifetime.",
+    "nextStepsTitle": "Next Steps",
+    "servicesButton": "Our Service Plans",
+    "paymentsButton": "Payment Methods"
+  }
+}
+
+    
