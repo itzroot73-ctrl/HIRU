@@ -15,20 +15,20 @@
     {
       "id": "gallery-2",
       "description": "A happy couple on their wedding day.",
-      "imageUrl": "https://images.unsplash.com/photo-1618566864264-fb013f791da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1591604466107-ec97de577aff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding couple"
     },
     {
       "id": "gallery-3",
-      "description": "A beautiful wedding ceremony setup.",
-      "imageUrl": "https://images.unsplash.com/photo-1723832347953-83c28e2d4dd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY5ODMyMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wedding ceremony"
+      "description": "Beautiful wedding decor at an outdoor ceremony.",
+      "imageUrl": "https://images.unsplash.com/photo-1523438885283-8b212a78e86e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3ZWRkaW5nJTIwZGVjb3J8ZW58MHx8fHwxNzcxNTg5NzM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding decor"
     },
     {
       "id": "gallery-4",
-      "description": "A close-up of wedding rings.",
-      "imageUrl": "https://images.unsplash.com/photo-1606800052052-a08af7148866?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwcmluZ3N8ZW58MHx8fHwxNzY5ODMzNjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "wedding rings"
+      "description": "A joyous wedding couple laughing together.",
+      "imageUrl": "https://images.unsplash.com/photo-1618566864264-fb013f791da4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding couple"
     },
     {
       "id": "gallery-5",
@@ -39,13 +39,13 @@
     {
       "id": "gallery-6",
       "description": "A portrait of a woman in a beautiful Sri Lankan setting.",
-      "imageUrl": "https://images.unsplash.com/photo-1751647233941-39696d993fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c3JpJTIwbGFua2ElMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk4NTQ1NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1619698734918-f6a529333930?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzcmklMjBsYW5rYW4lMjBnaXJsfGVufDB8fHx8fDE3NzE1OTAwNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sri lanka portrait"
     },
     {
       "id": "about-photographer",
       "description": "Portrait of a creative photographer with vintage cameras.",
-      "imageUrl": "https://images.unsplash.com/photo-1520341280432-4740d44e01a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHBob3RvZ3JhcGhlcnxlbnwwfHx8fDE3NzA0MzY4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1519638399535-1b036603ac77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMHBob3RvZ3JhcGhlcnxlbnwwfHx8fDE3NzA0MzY4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "photographer creative"
     },
     {
