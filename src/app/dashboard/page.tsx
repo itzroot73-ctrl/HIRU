@@ -5,26 +5,19 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import AuthButton from '@/components/auth/auth-button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import PageLoader from '@/components/layout/page-loader';
 
 export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
   const dashboardImages = PlaceHolderImages.filter(img => img.id.startsWith('dashboard-'));
 
   if (isUserLoading) {
-    return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow flex items-center justify-center">
-                <Loader2 className="h-16 w-16 animate-spin text-primary" />
-            </main>
-            <Footer />
-        </div>
-    );
+    return <PageLoader />;
   }
 
   if (!user) {

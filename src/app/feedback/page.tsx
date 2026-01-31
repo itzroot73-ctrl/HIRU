@@ -8,21 +8,13 @@ import FeedbackList from '@/components/feedback/feedback-list';
 import { Button } from '@/components/ui/button';
 import AuthButton from '@/components/auth/auth-button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2 } from 'lucide-react';
+import PageLoader from '@/components/layout/page-loader';
 
 export default function FeedbackPage() {
   const { user, isUserLoading } = useUser();
 
   if (isUserLoading) {
-    return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow flex items-center justify-center">
-                <Loader2 className="h-16 w-16 animate-spin text-primary" />
-            </main>
-            <Footer />
-        </div>
-    );
+    return <PageLoader />;
   }
 
   if (!user) {
@@ -72,5 +64,3 @@ export default function FeedbackPage() {
     </div>
   );
 }
-
-    

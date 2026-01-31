@@ -5,21 +5,13 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import PackagesList from '@/components/services/packages-list';
 import AuthButton from '@/components/auth/auth-button';
-import { Loader2 } from 'lucide-react';
+import PageLoader from '@/components/layout/page-loader';
 
 export default function ServicesPage() {
   const { user, isUserLoading } = useUser();
 
   if (isUserLoading) {
-    return (
-        <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-grow flex items-center justify-center">
-                <Loader2 className="h-16 w-16 animate-spin text-primary" />
-            </main>
-            <Footer />
-        </div>
-    );
+    return <PageLoader />;
   }
 
   if (!user) {
