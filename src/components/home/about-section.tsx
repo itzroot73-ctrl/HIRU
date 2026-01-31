@@ -26,10 +26,10 @@ export default function AboutSection() {
             <Card className="bg-card/60 backdrop-blur-md border-border/50">
                 <CardContent className="p-6">
                     <p className="text-lg text-foreground/80 mb-4">
-                    With a passion for storytelling and a keen eye for detail, we turn fleeting moments into timeless memories. Our approach combines artistic vision with technical expertise to create stunning visuals that resonate.
+                    Based in the beautiful island of Sri Lanka, I have a passion for storytelling and a keen eye for detail, turning fleeting moments into timeless memories. My approach combines artistic vision with technical expertise to create stunning visuals that resonate.
                     </p>
                     <p className="text-lg text-foreground/80">
-                    From weddings to portraits, we believe in a collaborative process, working closely with you to bring your vision to life. Let's create something beautiful together.
+                    From the lush green hills to the golden sandy beaches, I capture the essence of your story. Whether it's a wedding or a portrait session, I believe in a collaborative process, working closely with you to bring your vision to life. Let's create something beautiful together.
                     </p>
                 </CardContent>
             </Card>

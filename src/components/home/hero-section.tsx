@@ -2,13 +2,13 @@ export default function HeroSection() {
   return (
     <section className="relative h-[calc(100vh-56px)] w-full overflow-hidden">
       <video
-        src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+        src="https://videos.pexels.com/video-files/853829/853829-hd_1920_1080_24fps.mp4"
         autoPlay
         loop
         muted
         playsInline
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
-        data-ai-hint="cinematic camera"
+        data-ai-hint="photographer beach"
       />
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
