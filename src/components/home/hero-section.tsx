@@ -19,12 +19,12 @@ export default function HeroSection() {
                 I turn your special moments into timeless works of art. Based in Sri Lanka, I specialize in telling stories through beautiful, high-quality photographs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <Button asChild size="lg" className="group">
+                    <Button asChild size="default" className="group transition-transform duration-300 hover:scale-105">
                         <Link href="#services">
                             Our Services <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </Button>
-                    <Button asChild size="lg" variant="outline">
+                    <Button asChild size="default" variant="outline" className="transition-transform duration-300 hover:scale-105">
                         <Link href="#gallery">
                             View Gallery
                         </Link>
