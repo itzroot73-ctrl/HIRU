@@ -11,9 +11,9 @@ export default function HeroSection() {
         muted
         playsInline
         className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2 -z-10 brightness-50"
-        poster="https://storage.googleapis.com/aifirebase-75fb8.appspot.com/images%2Fwedding_couple_poster.jpg"
+        poster="https://images.unsplash.com/photo-1597595188497-85072a4f4d2f?q=80&w=1920"
       >
-        <source src="https://storage.googleapis.com/aifirebase-75fb8.appspot.com/videos%2Fwedding_couple.mp4" type="video/mp4" />
+        <source src="https://videos.pexels.com/video-files/853881/853881-hd_1920_1080_25fps.mp4" type="video/mp4" />
       </video>
       <div className="container relative z-10 flex h-full items-center justify-center text-center">
         <div className="max-w-3xl mx-auto space-y-6 opacity-0 animate-fade-in-up">
