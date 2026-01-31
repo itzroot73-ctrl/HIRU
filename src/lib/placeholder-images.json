@@ -3,13 +3,13 @@
     {
       "id": "gallery-1",
       "description": "A beautiful Sri Lankan wedding ceremony.",
-      "imageUrl": "https://images.unsplash.com/photo-1720944518138-b78fff4edc67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzcmklMjBsYW5rYSUyMHdlZGRpbmd8ZW58MHx8fHwxNzY5ODU2NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1664606414684-493c3d9d6023?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzcmklMjBsYW5rYSUyMHdlZGRpbmd8ZW58MHx8fHwxNzY5ODU2NDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sri lanka wedding"
     },
     {
       "id": "gallery-2",
       "description": "A happy couple on their wedding day.",
-      "imageUrl": "https://images.unsplash.com/photo-1606490194859-07c18c9f0968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGNvdXBsZXxlbnwwfHx8fDE3Njk4MzM2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599462616558-2b75fd26a283?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWRkaW5nJTIwY291cGxlfGVufDB8fHx8MTc2OTgzMzYzMHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding couple"
     },
     {
@@ -27,85 +27,85 @@
     {
       "id": "gallery-5",
       "description": "Guests celebrating at a wedding reception.",
-      "imageUrl": "https://images.unsplash.com/photo-1714972383570-44ddc9738355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWRkaW5nJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc3MDA4Mzg5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1647296020388-787fdae78e3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3ZWRkaW5nJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc2OTgwNDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding reception"
     },
     {
       "id": "gallery-6",
       "description": "A portrait of a woman in traditional Sri Lankan attire.",
-      "imageUrl": "https://images.unsplash.com/photo-1581925775929-92da8316b559?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcmklMjBsYW5rYSUyMGdpcmx8ZW58MHx8fHwxNzY5ODU3MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1711524889939-7a067c71b532?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzcmklMjBsYW5rYSUyMGdpcmx8ZW58MHx8fHwxNzY5ODU3MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "sri lanka girl"
     },
     {
       "id": "about-photographer",
       "description": "Portrait of a creative male photographer with a camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1579504344957-c09070053c7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcGhvdG9ncmFwaGVyfGVufDB8fHx8MTc2OTg1NzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1693339057176-75bff95239ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtYWxlJTIwcGhvdG9ncmFwaGVyfGVufDB8fHx8MTc2OTg1NzM1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male photographer"
     },
     {
       "id": "dashboard-1",
       "description": "A person holding a vintage camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYW1lcmF8ZW58MHx8fHwxNzcxMDM0MDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aW50YWdlJTIwY2FtZXJhfGVufDB8fHx8MTc2OTgzNDU2M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vintage camera"
     },
     {
       "id": "dashboard-2",
       "description": "A misty forest landscape.",
-      "imageUrl": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGV8ZW58MHx8fHwxNzcxMDM0MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1487621167305-5d248087c724?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaXN0eSUyMGZvcmVzdHxlbnwwfHx8fDE3Njk3NTc3OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "misty forest"
     },
     {
       "id": "dashboard-3",
       "description": "A photographer taking a picture.",
-      "imageUrl": "https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzcxMDM0MTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1693339057137-eea5021721e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoZXIlMjBzaG9vdGluZ3xlbnwwfHx8fDE3Njk4NjEzNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "photographer shooting"
     },
     {
       "id": "package-basic-wedding",
       "description": "An intimate wedding ceremony with a couple exchanging vows.",
-      "imageUrl": "https://images.unsplash.com/photo-1597157639073-692849d060b4?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1657425991870-421806ec0569?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbnRpbWF0ZSUyMHdlZGRpbmd8ZW58MHx8fHwxNzY5ODYxMzQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "intimate wedding"
     },
     {
       "id": "package-standard-wedding",
       "description": "A beautiful, well-decorated wedding ceremony aisle.",
-      "imageUrl": "https://images.unsplash.com/photo-1597593121941-848b5c47942f?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1723832347953-83c28e2d4dd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzY5ODMyMTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding ceremony"
     },
     {
       "id": "package-premium-wedding",
       "description": "A lavish and grand wedding reception with beautiful lighting.",
-      "imageUrl": "https://images.unsplash.com/photo-1523438885239-a2924141da3c?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1767986012154-db9a321c8832?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsYXZpc2glMjB3ZWRkaW5nfGVufDB8fHx8MTc2OTg2MTM0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "lavish wedding"
     },
     {
       "id": "package-portrait",
       "description": "A professional portrait photo of a person in a scenic outdoor location.",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY5ODM4MTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "male portrait"
     },
     {
       "id": "package-event",
       "description": "People collaborating and networking at a corporate event.",
-      "imageUrl": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1560439514-4e9645039924?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb3Jwb3JhdGUlMjBldmVudHxlbnwwfHx8fDE3Njk3NzA0NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "corporate event"
     },
     {
       "id": "payment-card",
       "description": "A person making a secure contactless payment with a credit card.",
-      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1726607288637-a646ddd3814a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29udGFjdGxlc3MlMjBwYXltZW50fGVufDB8fHx8MTc2OTc3NTU4OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "contactless payment"
     },
     {
       "id": "payment-bank",
       "description": "A person using a laptop for online banking to make a bank transfer.",
-      "imageUrl": "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1607697987724-fc9f8b225223?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvbmxpbmUlMjBiYW5raW5nfGVufDB8fHx8MTc2OTg2MTM0NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "online banking"
     },
     {
       "id": "payment-crypto",
       "description": "A collection of physical cryptocurrency coins including Bitcoin and Ethereum.",
-      "imageUrl": "https://images.unsplash.com/photo-1621417532322-b5f7b3b4f9a7?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1608689535356-0dca72bfa8b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjcnlwdG8lMjBjb2luc3xlbnwwfHx8fDE3Njk4NDY3ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "crypto coins"
     }
   ]
