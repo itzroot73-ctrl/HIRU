@@ -1,11 +1,10 @@
 'use client';
 
-import { CheckCircle2, ShoppingCart, CreditCard, Landmark, Phone, Mail, Bitcoin } from "lucide-react";
+import { CheckCircle2, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Separator } from "@/components/ui/separator";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const packagesData = [
@@ -108,66 +107,6 @@ export default function PackagesList() {
                     </div>
                 ))}
         </div>
-
-        <Separator className="my-16" />
-
-        <div id="payment-info" className="max-w-4xl mx-auto">
-            <div className="text-center">
-                <h3 className="font-headline text-3xl font-bold mb-4">Contact & Payment</h3>
-                <p className="text-muted-foreground mb-8">
-                Ready to book or have questions? Get in touch with us! We accept multiple payment methods for your convenience.
-                </p>
-            </div>
-
-            <Card className="mb-8 bg-card/60 border-amber-500/50">
-                <CardHeader>
-                    <CardTitle className="text-amber-500">Important Notice</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-foreground/80">
-                    To secure your booking date and begin the creative process, we require a 50% advance payment for all our photography packages. The remaining balance is due on the day of the photoshoot.
-                    </p>
-                </CardContent>
-            </Card>
-
-            <div className="grid md:grid-cols-2 gap-8">
-                <Card className="bg-card/60">
-                    <CardHeader>
-                        <CardTitle>Contact Details</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <a href="https://wa.me/94771234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
-                            <Phone className="w-5 h-5 text-primary" />
-                            <span>+94 77 123 4567 (WhatsApp)</span>
-                        </a>
-                        <a href="mailto:contact@hiru.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
-                            <Mail className="w-5 h-5 text-primary" />
-                            <span>contact@hiru.com</span>
-                        </a>
-                    </CardContent>
-                </Card>
-                <Card className="bg-card/60">
-                    <CardHeader>
-                        <CardTitle>Payments We Accept</CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                            <CreditCard className="w-5 h-5 text-primary" />
-                            <span>Visa & Mastercard</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                            <Landmark className="w-5 h-5 text-primary" />
-                            <span>Direct Bank Transfer</span>
-                        </div>
-                        <div className="flex items-center gap-3 text-muted-foreground">
-                            <Bitcoin className="w-5 h-5 text-primary" />
-                            <span>Cryptocurrency (BTC, ETH)</span>
-                        </div>
-                    </CardContent>
-                </Card>
-            </div>
-        </div>
-
       </div>
     </section>
   );

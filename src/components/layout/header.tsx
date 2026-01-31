@@ -31,6 +31,9 @@ export default function Header() {
                     <Link href="/services" className="text-foreground/70 transition-colors hover:text-foreground">
                         Packages
                     </Link>
+                    <Link href="/payments" className="text-foreground/70 transition-colors hover:text-foreground">
+                        Payments
+                    </Link>
                     <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
                         Feedback
                     </Link>

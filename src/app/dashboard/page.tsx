@@ -83,7 +83,7 @@ export default function DashboardPage() {
                         </Link>
                     </Button>
                      <Button asChild size="lg" variant="outline">
-                        <Link href="/services#payment-info">
+                        <Link href="/payments">
                             Payment Methods
                         </Link>
                     </Button>
