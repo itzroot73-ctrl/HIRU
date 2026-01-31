@@ -12,7 +12,7 @@ export default function GallerySection() {
           <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Work</h2>
           <p className="text-lg text-muted-foreground mt-2">A glimpse into the moments we've captured in Sri Lanka.</p>
         </div>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {galleryImages.map((image, index) => (
                 <Card key={image.id} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 opacity-0 animate-fade-in-up" style={{ animationDelay: `${100 * (index + 1)}ms` }}>

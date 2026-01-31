@@ -8,7 +8,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 md:py-24 bg-secondary/20 overflow-hidden">
       <div className="container">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="relative aspect-square opacity-0 animate-fade-in-up">
             {photographerImage && (
               <Image
@@ -21,7 +21,7 @@ export default function AboutSection() {
               />
             )}
           </div>
-          <div className="space-y-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+          <div className="space-y-4 text-center md:text-left opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             <h2 className="font-headline text-4xl md:text-5xl font-bold">Meet the Artist</h2>
             <Card className="bg-card/60 backdrop-blur-md border-border/50">
                 <CardContent className="p-6">
