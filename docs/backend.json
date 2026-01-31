@@ -1,0 +1,231 @@
+{
+  "entities": {
+    "UserProfile": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "UserProfile",
+      "type": "object",
+      "description": "Represents a user profile in the LensVivid application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user profile."
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address.",
+          "format": "email"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User's display name."
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "URL of the user's profile photo.",
+          "format": "uri"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "User's phone number."
+        },
+        "aboutMe": {
+          "type": "string",
+          "description": "A short description about the user."
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "displayName"
+      ]
+    },
+    "Service": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Service",
+      "type": "object",
+      "description": "Represents a photography service offered by LensVivid.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the service."
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the photography service."
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the service."
+        },
+        "price": {
+          "type": "number",
+          "description": "Price of the service."
+        },
+        "imageURL": {
+          "type": "string",
+          "description": "URL to an image representing the service.",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "price"
+      ]
+    },
+    "Feedback": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Feedback",
+      "type": "object",
+      "description": "Represents user feedback for a photography service.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the feedback entry."
+        },
+        "userProfileId": {
+          "type": "string",
+          "description": "Reference to UserProfile. (Relationship: UserProfile 1:N Feedback)"
+        },
+        "serviceId": {
+          "type": "string",
+          "description": "Reference to Service. (Relationship: Service 1:N Feedback)"
+        },
+        "rating": {
+          "type": "number",
+          "description": "Rating given by the user (e.g., 1-5 stars)."
+        },
+        "comment": {
+          "type": "string",
+          "description": "User's comment about the service."
+        },
+        "dateCreated": {
+          "type": "string",
+          "description": "Date and time when the feedback was submitted.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "userProfileId",
+        "serviceId",
+        "rating",
+        "comment"
+      ]
+    },
+    "GalleryImage": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "GalleryImage",
+      "type": "object",
+      "description": "Represents an image in the photography gallery.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the gallery image."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL of the image.",
+          "format": "uri"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the image."
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the image."
+        },
+        "dateUploaded": {
+          "type": "string",
+          "description": "Date and time when the image was uploaded.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "imageUrl"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/users/{userId}",
+        "definition": {
+          "entityName": "UserProfile",
+          "schema": {
+            "$ref": "#/backend/entities/UserProfile"
+          },
+          "description": "Stores user profiles. Access is restricted to the user themselves.",
+          "params": [
+            {
+              "name": "userId",
+              "description": "The unique identifier of the user."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/services/{serviceId}",
+        "definition": {
+          "entityName": "Service",
+          "schema": {
+            "$ref": "#/backend/entities/Service"
+          },
+          "description": "Stores information about photography services.",
+          "params": [
+            {
+              "name": "serviceId",
+              "description": "The unique identifier of the service."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/users/{userProfileId}/feedbacks/{feedbackId}",
+        "definition": {
+          "entityName": "Feedback",
+          "schema": {
+            "$ref": "#/backend/entities/Feedback"
+          },
+          "description": "Stores user feedback for photography services. Includes denormalized 'userProfileId' for authorization independence.",
+          "params": [
+            {
+              "name": "userProfileId",
+              "description": "The unique identifier of the user who provided the feedback."
+            },
+            {
+              "name": "feedbackId",
+              "description": "The unique identifier of the feedback entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/gallery_images/{imageId}",
+        "definition": {
+          "entityName": "GalleryImage",
+          "schema": {
+            "$ref": "#/backend/entities/GalleryImage"
+          },
+          "description": "Stores images for the photography gallery.",
+          "params": [
+            {
+              "name": "imageId",
+              "description": "The unique identifier of the gallery image."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore data structure is designed to support the LensVivid application's features, emphasizing security, scalability, and ease of debugging. It incorporates denormalization to ensure authorization independence, avoids `get()` calls in security rules, and adheres to the principle that rules are not filters (QAPs).  \n\n**Authorization Independence:**  Ownership and authorization context are denormalized into subcollections to avoid hierarchical dependencies. For example, `Feedback` includes the `userProfileId` which represents the owner, so security rules do not need to fetch the parent `UserProfile` to validate access.  \n\n**QAPs:**  The structure supports secure `list` operations (QAPs) through structural segregation and path-based ownership. Each collection houses data with a consistent security posture, ensuring that listing operations can be secured effectively without filtering data based on document content. The use of hierarchical paths `/users/{userId}/feedbacks/{feedbackId}` enables the efficient listing of a user's feedback, as well as simplifies security rules. \n\n**User Profiles:** User profiles are stored in a private collection `/users/{userId}`. This ensures that profile data is directly tied to the authenticated user and simplifies security rules for profile access.\n\n**Services:** Services are stored in a root-level collection `/services`.  \n\n**Feedback:** Feedback is nested under the user who created it and the service it refers to at `/users/{userProfileId}/feedbacks/{feedbackId}`. This simplifies securing access to feedback based on user identity."
+  }
+}

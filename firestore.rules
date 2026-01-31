@@ -1,0 +1,136 @@
+/**
+ * This ruleset enforces a strict security model for the LensVivid application,
+ * prioritizing user privacy and data integrity while allowing for rapid development.
+ *
+ * Core Philosophy:
+ * The rules establish a strong user-ownership model. All user-generated content
+ * is private by default and can only be accessed or modified by its owner.
+ * Publicly accessible data, such as services and gallery images, is read-only
+ * for all clients, with write operations intended for admin-level access
+ * (which must be implemented separately).
+ *
+ * Data Structure:
+ * - Private user data is stored hierarchically under `/users/{userId}`. This includes
+ *   the user's profile and any subcollections they own, like feedback.
+ * - Public, application-wide data (like services and gallery images) is stored in
+ *   top-level collections to simplify public read access.
+ *
+ * Key Security Decisions:
+ * - Default Deny: Access is denied by default; rules only grant specific permissions.
+ * - User Scoping: Users are strictly confined to their own data subtree (`/users/{userId}`).
+ * - No User Enumeration: Listing documents in the top-level `/users` collection is prohibited.
+ * - Public Data is Read-Only: Collections like `/services` and `/gallery_images` are
+ *   publicly readable but cannot be modified by clients, preventing vandalism.
+ *
+ * Denormalization for Authorization:
+ * The security model relies on denormalized data to perform fast and secure authorization
+ * checks without needing extra `get()` calls. For instance, the path itself in
+ * `/users/{userProfileId}/feedbacks/{feedbackId}` establishes ownership, making rules
+ * simple and performant.
+ *
+ * Structural Segregation:
+ * The separation of private data (`/users`) from public data (`/services`, `/gallery_images`)
+ * is a deliberate choice. This allows for secure and efficient list operations on public
+ * collections while guaranteeing the privacy of user-specific documents.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper Functions
+    // --------------------------------
+
+    /**
+     * Checks if a user is authenticated.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Checks if the currently authenticated user's UID matches the provided userId.
+     * This is the primary function for establishing document ownership.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * Checks for ownership on an existing document. Used for update and delete
+     * operations to prevent acting on non-existent data.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && resource != null;
+    }
+
+    // Collection Rules
+    // --------------------------------
+
+    /**
+     * @description Controls access to user profile documents.
+     * @path /users/{userId}
+     * @allow (create) A new user creating their own profile document.
+     * @allow (get, update, delete) An authenticated user accessing their own profile.
+     * @deny (list) Any user, to prevent enumeration of all application users.
+     * @deny (get, update) A user attempting to access another user's profile.
+     * @principle Restricts access to a user's own data tree and enforces self-creation.
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId) && request.resource.data.id == userId;
+      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow delete: if isExistingOwner(userId);
+
+      /**
+       * @description Controls access to a user's feedback subcollection.
+       * @path /users/{userProfileId}/feedbacks/{feedbackId}
+       * @allow (create, list) An authenticated user creating or listing their own feedback.
+       * @deny (create) A user trying to create feedback on behalf of another user.
+       * @deny (get, update, delete) A user trying to access another user's feedback.
+       * @principle Enforces document ownership within a user's private data subtree.
+       */
+      match /feedbacks/{feedbackId} {
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId) && request.resource.data.userProfileId == userId;
+        allow update: if isExistingOwner(userId) && request.resource.data.userProfileId == resource.data.userProfileId;
+        allow delete: if isExistingOwner(userId);
+      }
+    }
+
+    /**
+     * @description Controls access to photography service listings.
+     * @path /services/{serviceId}
+     * @allow (get, list) Any user, including anonymous ones, can view available services.
+     * @deny (create, update, delete) All clients are blocked from modifying service data.
+     * @principle Provides public read access while protecting data integrity. Writes should be handled by a trusted admin SDK.
+     */
+    match /services/{serviceId} {
+      allow get: if true;
+      allow list: if true;
+      // CRITICAL: Cannot implement owner-only writes. The 'Service' entity is missing an 'ownerId' or 'authorId' field.
+      // To enable client writes, add an ownership field to the Service entity and validate it here.
+      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+    }
+
+    /**
+     * @description Controls access to the public image gallery.
+     * @path /gallery_images/{imageId}
+     * @allow (get, list) Any user, including anonymous ones, can view gallery images.
+     * @deny (create, update, delete) All clients are blocked from modifying the gallery.
+     * @principle Provides public read access while protecting data integrity. Writes should be handled by a trusted admin SDK.
+     */
+    match /gallery_images/{imageId} {
+      allow get: if true;
+      allow list: if true;
+      // CRITICAL: Cannot implement owner-only writes. The 'GalleryImage' entity is missing an 'ownerId' or 'authorId' field.
+      // To enable client writes, add an ownership field to the GalleryImage entity and validate it here.
+      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
+      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+    }
+  }
+}
