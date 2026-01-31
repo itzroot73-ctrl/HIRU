@@ -16,12 +16,12 @@ export default function GallerySection() {
           {galleryImages.map((image, index) => (
             <Card key={image.id} className="overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300 opacity-0 animate-fade-in-up" style={{ animationDelay: `${100 * (index + 1)}ms` }}>
               <CardContent className="p-0">
-                <div className="aspect-w-3 aspect-h-4">
+                <div className="aspect-square">
                   <Image
                     src={image.imageUrl}
                     alt={image.description}
                     width={600}
-                    height={800}
+                    height={600}
                     className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
                     data-ai-hint={image.imageHint}
                   />
