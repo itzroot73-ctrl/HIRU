@@ -28,6 +28,10 @@ export default function AuthButton() {
       await signInWithPopup(auth, provider);
       router.push('/dashboard');
     } catch (error: any) {
+      if (error.code === 'auth/popup-closed-by-user') {
+        console.info("Sign-in popup closed by user.");
+        return; // Don't show an error toast if the user intentionally closes the popup.
+      }
       console.error("Error signing in with Google: ", error);
       toast({
         variant: "destructive",
