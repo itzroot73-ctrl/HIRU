@@ -63,49 +63,49 @@
     {
       "id": "package-basic-wedding",
       "description": "An intimate wedding ceremony with a couple exchanging vows.",
-      "imageUrl": "https://images.unsplash.com/photo-1520854221256-17452cc331bf?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1597157639073-692849d060b4?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "intimate wedding"
     },
     {
       "id": "package-standard-wedding",
       "description": "A beautiful, well-decorated wedding ceremony aisle.",
-      "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzcwMDgzNTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1597593121941-848b5c47942f?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "wedding ceremony"
     },
     {
       "id": "package-premium-wedding",
       "description": "A lavish and grand wedding reception with beautiful lighting.",
-      "imageUrl": "https://images.unsplash.com/photo-1521993998533-5c317059c07e?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1523438885239-a2924141da3c?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "lavish wedding"
     },
     {
       "id": "package-portrait",
       "description": "A professional portrait photo of a person in a scenic outdoor location.",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzcxMDk1MTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "male portrait"
     },
     {
       "id": "package-event",
       "description": "People collaborating and networking at a corporate event.",
-      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxldmVudCUyMHBob3RvZ3JhcGh5fGVufDB8fHx8MTc2OTg4MjM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "corporate event"
     },
     {
       "id": "payment-card",
       "description": "A person making a secure contactless payment with a credit card.",
-      "imageUrl": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "contactless payment"
     },
     {
       "id": "payment-bank",
       "description": "A person using a laptop for online banking to make a bank transfer.",
-      "imageUrl": "https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "online banking"
     },
     {
       "id": "payment-crypto",
       "description": "A collection of physical cryptocurrency coins including Bitcoin and Ethereum.",
-      "imageUrl": "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1621417532322-b5f7b3b4f9a7?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "crypto coins"
     }
   ]
