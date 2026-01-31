@@ -27,7 +27,7 @@
     {
       "id": "gallery-5",
       "description": "Guests celebrating at a wedding reception.",
-      "imageUrl": "https://images.unsplash.com/photo-1714972383570-44ddc9738355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWRkaW5nJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc2OTgwNDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1714972383570-44ddc9738355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3ZWRkaW5nJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc3MDA4Mzg5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "wedding reception"
     },
     {
@@ -44,21 +44,21 @@
     },
     {
       "id": "dashboard-1",
-      "description": "A close-up of a professional camera lens.",
-      "imageUrl": "https://images.unsplash.com/photo-1533746228171-962520811097?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYW1lcmElMjBsZW5zfGVufDB8fHx8MTc2OTgzODYxMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "camera lens"
+      "description": "A person holding a vintage camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYW1lcmF8ZW58MHx8fHwxNzcxMDM0MDUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vintage camera"
     },
     {
       "id": "dashboard-2",
-      "description": "A stunning landscape photo of mountains at sunrise.",
-      "imageUrl": "https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWF1dGlmdWwlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzY5ODU3MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "beautiful landscape"
+      "description": "A misty forest landscape.",
+      "imageUrl": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGV8ZW58MHx8fHwxNzcxMDM0MDc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "misty forest"
     },
     {
       "id": "dashboard-3",
-      "description": "A collection of photography gear on a wooden table.",
-      "imageUrl": "https://images.unsplash.com/photo-1549734128-b44d4ba3db5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaG90b2dyYXBoeSUyMGdlYXJ8ZW58MHx8fHwxNzY5ODU3MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photography gear"
+      "description": "A photographer taking a picture.",
+      "imageUrl": "https://images.unsplash.com/photo-1495745966610-2a67f2297e5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoZXJ8ZW58MHx8fHwxNzcxMDM0MTEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photographer shooting"
     },
     {
       "id": "package-basic-wedding",
