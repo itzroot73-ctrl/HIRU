@@ -105,7 +105,7 @@
     {
       "id": "payment-crypto",
       "description": "A physical representation of a Bitcoin coin.",
-      "imageUrl": "https://images.unsplash.com/photo-1621406327092-2933de6625b0?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1621504450329-b6b6bcf5a4a5?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "bitcoin coin"
     }
   ]
