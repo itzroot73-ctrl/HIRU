@@ -10,7 +10,7 @@ export default function GallerySection() {
       <div className="container">
         <div className="text-center mb-12 opacity-0 animate-fade-in-up">
           <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Work</h2>
-          <p className="text-lg text-muted-foreground mt-2">A glimpse into the moments we've captured.</p>
+          <p className="text-lg text-muted-foreground mt-2">A glimpse into the moments we've captured in Sri Lanka.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {galleryImages.map((image, index) => (

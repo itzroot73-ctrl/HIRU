@@ -1,58 +1,46 @@
 {
   "placeholderImages": [
     {
+      "id": "hero-illustration",
+      "description": "Artistic illustration of two astronauts in colorful helmets",
+      "imageUrl": "https://storage.googleapis.com/aifirebase-75fb8.appspot.com/images%2Ff94294a9-25f0-4665-9856-784862b1029c.png",
+      "imageHint": "futuristic illustration astronaut"
+    },
+    {
       "id": "gallery-1",
-      "description": "Woman in a yellow dress in a field of flowers",
-      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTgzOTYyNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "woman portrait"
+      "description": "Sigiriya rock fortress in Sri Lanka",
+      "imageUrl": "https://images.unsplash.com/photo-1590242491539-0a6b729f2f9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWdpcnl5YSUyMHNyaSUyMGxhbmthfGVufDB8fHx8MTc3MDA2NTM5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka sigiriya"
     },
     {
       "id": "gallery-2",
-      "description": "Man standing on a mountain peak",
-      "imageUrl": "https://images.unsplash.com/photo-1576068036336-328de1be1f2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3Njk3Njg1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "mountain landscape"
+      "description": "Stilt fishermen in Sri Lanka at sunset",
+      "imageUrl": "https://images.unsplash.com/photo-1583689408643-a615f5a81e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdGlsdCUyMGZpc2hlcm1lbiUyMHNyaSUyMGxhbmthfGVufDB8fHx8MTc3MDA2NTQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka fisherman"
     },
     {
       "id": "gallery-3",
-      "description": "City street at night with neon lights",
-      "imageUrl": "https://images.unsplash.com/photo-1506606401543-2e73709cebb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwbmlnaHR8ZW58MHx8fHwxNzY5Nzg2MzgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city night"
+      "description": "Nine Arch Bridge in Ella, Sri Lanka",
+      "imageUrl": "https://images.unsplash.com/photo-1600109964057-79b8c35a6b18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuaW5lJTIwYXJjaCUyMGJyaWRnZSUyMHNyaSUyMGxhbmthfGVufDB8fHx8MTc3MDA2NTQ0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka train"
     },
     {
       "id": "gallery-4",
-      "description": "Close up of a dew-covered leaf",
-      "imageUrl": "https://images.unsplash.com/photo-1542913235-1f46ce06443d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuYXR1cmUlMjBtYWNyb3xlbnwwfHx8fDE3Njk4NDgxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nature macro"
+      "description": "A leopard in Yala National Park, Sri Lanka",
+      "imageUrl": "https://images.unsplash.com/photo-1598914092477-a81232e9210c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsZW9wYXJkJTIwc3JpJTIwbGFua2F8ZW58MHx8fHwxNzcwMDY1NDgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka leopard"
     },
     {
       "id": "gallery-5",
-      "description": "A classic car on a desert road",
-      "imageUrl": "https://images.unsplash.com/photo-1530642901805-fdb3c28754b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc2ljJTIwY2FyfGVufDB8fHx8MTc2OTgxODQzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "classic car"
+      "description": "A traditional Kandyan dancer in Sri Lanka",
+      "imageUrl": "https://images.unsplash.com/photo-1628177348937-6743956d73b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYW5keWFuJTIwZGFuY2VyJTIwc3JpJTIwbGFua2F8ZW58MHx8fHwxNzcwMDY1NTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka culture"
     },
     {
       "id": "gallery-6",
-      "description": "A couple laughing together on a beach",
+      "description": "A couple laughing together on a beach in Sri Lanka",
       "imageUrl": "https://images.unsplash.com/photo-1623137285582-8a3608b5ff09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3VwbGUlMjBiZWFjaHxlbnwwfHx8fDE3Njk4NDgxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "couple beach"
-    },
-    {
-      "id": "gallery-7",
-      "description": "Architectural details of a modern building",
-      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY5ODQ3ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern architecture"
-    },
-    {
-      "id": "gallery-8",
-      "description": "A chef plating a gourmet dish",
-      "imageUrl": "https://images.unsplash.com/photo-1552611052-33e04de081de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb29kJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzY5ODI4NDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "food photography"
-    },
-    {
-      "id": "gallery-9",
-      "description": "A musician playing guitar on stage",
-      "imageUrl": "https://images.unsplash.com/photo-1743791022256-40413c5f019b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25jZXJ0JTIwbXVzaWN8ZW58MHx8fHwxNzY5Nzc1NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "concert music"
     },
     {
       "id": "about-photographer",
