@@ -8,19 +8,19 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Skeleton } from '../ui/skeleton';
 
 interface FeedbackListProps {
-  userProfileId: string;
+  userId: string;
 }
 
-export default function FeedbackList({ userProfileId }: FeedbackListProps) {
+export default function FeedbackList({ userId }: FeedbackListProps) {
   const firestore = useFirestore();
 
   const feedbackQuery = useMemoFirebase(() => {
-    if (!firestore || !userProfileId) return null;
+    if (!firestore || !userId) return null;
     return query(
-        collection(firestore, `users/${userProfileId}/feedbacks`),
+        collection(firestore, `users/${userId}/feedbacks`),
         orderBy('dateCreated', 'desc')
     );
-  }, [firestore, userProfileId]);
+  }, [firestore, userId]);
 
   const { data: feedbacks, isLoading, error } = useCollection<Feedback>(feedbackQuery);
 
@@ -61,3 +61,5 @@ export default function FeedbackList({ userProfileId }: FeedbackListProps) {
     </div>
   );
 }
+
+    

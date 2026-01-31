@@ -54,7 +54,7 @@ export default function FeedbackPage() {
                     <CardTitle>Leave a Review</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <FeedbackForm userProfileId={user.uid} />
+                    <FeedbackForm userId={user.uid} />
                 </CardContent>
             </Card>
 
@@ -63,7 +63,7 @@ export default function FeedbackPage() {
                     <CardTitle>Your Past Feedback</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <FeedbackList userProfileId={user.uid} />
+                    <FeedbackList userId={user.uid} />
                 </CardContent>
             </Card>
         </div>
@@ -72,3 +72,5 @@ export default function FeedbackPage() {
     </div>
   );
 }
+
+    

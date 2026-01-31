@@ -7,7 +7,7 @@
  * This approach enhances security, performance, and simplifies the rules logic.
  *
  * Data Structure:
- * All private user data, including profiles, payment cards, and purchase history, is nested
+ * All private user data, including profiles, payment cards, purchase history, and feedback, is nested
  * within a user-specific document tree: /users/{userId}/... Access to this tree is controlled
  * by matching the authenticated user's ID with the {userId} in the path. Publicly browsable
  * content, like photography services, is stored in a separate top-level collection, /photographyServices.
@@ -18,9 +18,8 @@
  * - Public Read, Restricted Writes: The /photographyServices collection is readable by anyone,
  *   including unauthenticated users, to allow for browsing. However, writes are currently disabled
  *   pending the addition of an ownership field (e.g., 'authorId') to the data model to identify the creator.
- * - Relational Integrity: On creation, documents within a user's tree (e.g., a payment card) must
- *   contain a 'userId' field that matches the {userId} from the path. This ownership link is immutable
- *   and cannot be changed on update.
+ * - Relational Integrity: On creation, documents within a user's tree must contain a 'userId'
+ *   field that matches the {userId} from the path. This ownership link is immutable.
  *
  * Denormalization for Authorization:
  * This ruleset relies on path-based authorization by storing all of a user's private data under a
@@ -87,9 +86,8 @@ service cloud.firestore {
 
     /**
      * isCreatingOwnValidDocument
-     * Validates that a user is creating a document (e.g., PaymentCard, Purchase) within
-     * their own data tree and that the document's internal 'userId' field correctly
-     * matches their authenticated UID.
+     * Validates that a user is creating a document within their own data tree and that
+     * the document's internal 'userId' field correctly matches their authenticated UID.
      */
     function isCreatingOwnValidDocument(userId) {
       return isOwner(userId) && request.resource.data.userId == userId;
@@ -110,9 +108,6 @@ service cloud.firestore {
     /**
      * @description Controls access to a user's private profile document.
      * @path /users/{userId}/profiles/{profileId}
-     * @allow A signed-in user (auth.uid: 'user_abc') can (create) their own profile at /users/user_abc/profiles/profile_123.
-     * @deny A different user (auth.uid: 'user_xyz') is blocked from (get)ting the profile at /users/user_abc/profiles/profile_123.
-     * @principle Restricts access to a user's own data tree and validates relational integrity.
      */
     match /users/{userId}/profiles/{profileId} {
       allow get: if isOwner(userId);
@@ -125,9 +120,6 @@ service cloud.firestore {
     /**
      * @description Controls access to a user's private payment card information.
      * @path /users/{userId}/paymentCards/{paymentCardId}
-     * @allow A signed-in user (auth.uid: 'user_abc') can (list) their own payment cards at /users/user_abc/paymentCards.
-     * @deny A different user (auth.uid: 'user_xyz') is blocked from (create)ing a card at /users/user_abc/paymentCards/card_456.
-     * @principle Enforces strict document ownership for sensitive financial data.
      */
     match /users/{userId}/paymentCards/{paymentCardId} {
       allow get: if isOwner(userId);
@@ -140,11 +132,20 @@ service cloud.firestore {
     /**
      * @description Controls access to a user's private purchase history.
      * @path /users/{userId}/purchases/{purchaseId}
-     * @allow A signed-in user (auth.uid: 'user_abc') can (delete) their own purchase record at /users/user_abc/purchases/purchase_789.
-     * @deny An anonymous user is blocked from (get)ting any purchase record.
-     * @principle Restricts access to a user's own data tree and validates relational integrity.
      */
     match /users/{userId}/purchases/{purchaseId} {
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isCreatingOwnValidDocument(userId);
+      allow update: if isExistingOwner(userId) && isUpdatingOwnValidDocument();
+      allow delete: if isExistingOwner(userId);
+    }
+    
+    /**
+     * @description Controls access to a user's private feedback entries.
+     * @path /users/{userId}/feedbacks/{feedbackId}
+     */
+    match /users/{userId}/feedbacks/{feedbackId} {
       allow get: if isOwner(userId);
       allow list: if isOwner(userId);
       allow create: if isCreatingOwnValidDocument(userId);
@@ -155,9 +156,6 @@ service cloud.firestore {
     /**
      * @description Controls access to publicly available photography services.
      * @path /photographyServices/{serviceId}
-     * @allow Any user, including anonymous ones, can (get) or (list) all photography services.
-     * @deny Any user, including signed-in ones, is blocked from (create)ing a new service.
-     * @principle Allows public read access for browsing but locks down writes for security.
      */
     match /photographyServices/{serviceId} {
       allow get: if true;
@@ -169,3 +167,4 @@ service cloud.firestore {
     }
   }
 }
+    

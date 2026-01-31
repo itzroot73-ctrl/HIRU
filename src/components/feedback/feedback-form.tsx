@@ -28,10 +28,10 @@ const feedbackSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackSchema>;
 
 interface FeedbackFormProps {
-  userProfileId: string;
+  userId: string;
 }
 
-export default function FeedbackForm({ userProfileId }: FeedbackFormProps) {
+export default function FeedbackForm({ userId }: FeedbackFormProps) {
   const firestore = useFirestore();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,12 +50,12 @@ export default function FeedbackForm({ userProfileId }: FeedbackFormProps) {
 
     const feedbackData = {
         ...data,
-        userProfileId,
+        userId,
         dateCreated: new Date().toISOString(),
     };
 
     try {
-        const feedbackCollectionRef = collection(firestore, `users/${userProfileId}/feedbacks`);
+        const feedbackCollectionRef = collection(firestore, `users/${userId}/feedbacks`);
         await addDocumentNonBlocking(feedbackCollectionRef, feedbackData);
         
         toast({
@@ -112,3 +112,5 @@ export default function FeedbackForm({ userProfileId }: FeedbackFormProps) {
     </Form>
   );
 }
+
+    
