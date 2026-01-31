@@ -92,21 +92,21 @@
     },
     {
       "id": "payment-card",
-      "description": "A person holding a credit card in front of a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmVkaXQlMjBjYXJkJTIwcGF5bWVudHxlbnwwfHx8fDE3NzEwOTUzODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "card payment"
+      "description": "A person making a secure contactless payment with a credit card.",
+      "imageUrl": "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "contactless payment"
     },
     {
       "id": "payment-bank",
-      "description": "An image of a classical bank building facade.",
-      "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiYW5rJTIwdHJhbnNmZXJ8ZW58MHx8fHwxNzcxMDk1NDMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "bank building"
+      "description": "A person using a laptop for online banking to make a bank transfer.",
+      "imageUrl": "https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "online banking"
     },
     {
       "id": "payment-crypto",
-      "description": "A physical representation of a Bitcoin coin.",
-      "imageUrl": "https://images.unsplash.com/photo-1621504450329-b6b6bcf5a4a5?q=80&w=1080&auto=format&fit=crop",
-      "imageHint": "bitcoin coin"
+      "description": "A collection of physical cryptocurrency coins including Bitcoin and Ethereum.",
+      "imageUrl": "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?q=80&w=1080&auto=format&fit=crop",
+      "imageHint": "crypto coins"
     }
   ]
 }
