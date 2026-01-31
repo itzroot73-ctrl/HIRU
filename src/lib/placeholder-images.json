@@ -59,6 +59,36 @@
       "description": "A collection of photography gear on a wooden table.",
       "imageUrl": "https://images.unsplash.com/photo-1549734128-b44d4ba3db5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwaG90b2dyYXBoeSUyMGdlYXJ8ZW58MHx8fHwxNzY5ODU3MzUwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "photography gear"
+    },
+    {
+      "id": "package-basic-wedding",
+      "description": "An intimate wedding ceremony.",
+      "imageUrl": "https://images.unsplash.com/photo-1587271407850-8d438ca9f32f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMHdlZGRpbmd8ZW58MHx8fHwxNzcwMDgzNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "small wedding"
+    },
+    {
+      "id": "package-standard-wedding",
+      "description": "A beautiful wedding ceremony.",
+      "imageUrl": "https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWRkaW5nJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzcwMDgzNTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding ceremony"
+    },
+    {
+      "id": "package-premium-wedding",
+      "description": "A lavish and grand wedding reception.",
+      "imageUrl": "https://images.unsplash.com/photo-1523438885239-a2a61a7a0084?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsYXZpc2glMjB3ZWRkaW5nfGVufDB8fHx8MTc3MDA4MzYwNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lavish wedding"
+    },
+    {
+      "id": "package-portrait",
+      "description": "A professional portrait photo.",
+      "imageUrl": "https://images.unsplash.com/photo-1659176023401-def08b26fb7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzcmklMjBsYW5rYSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTg1NDU3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka portrait"
+    },
+    {
+      "id": "package-event",
+      "description": "Capturing the moments of a corporate event.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxldmVudCUyMHBob3RvZ3JhcGh5fGVufDB8fHx8MTc2OTg4MjM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event photography"
     }
   ]
 }
