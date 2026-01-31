@@ -1,136 +1,171 @@
 /**
- * This ruleset enforces a strict security model for the LensVivid application,
- * prioritizing user privacy and data integrity while allowing for rapid development.
+ * This ruleset enforces a strict user-ownership security model for the LensVivid application.
  *
  * Core Philosophy:
- * The rules establish a strong user-ownership model. All user-generated content
- * is private by default and can only be accessed or modified by its owner.
- * Publicly accessible data, such as services and gallery images, is read-only
- * for all clients, with write operations intended for admin-level access
- * (which must be implemented separately).
+ * The primary security goal is to isolate user-specific data, ensuring that a user can only ever access
+ * their own information. Publicly accessible data is explicitly segregated into its own top-level collection.
+ * This approach enhances security, performance, and simplifies the rules logic.
  *
  * Data Structure:
- * - Private user data is stored hierarchically under `/users/{userId}`. This includes
- *   the user's profile and any subcollections they own, like feedback.
- * - Public, application-wide data (like services and gallery images) is stored in
- *   top-level collections to simplify public read access.
+ * All private user data, including profiles, payment cards, and purchase history, is nested
+ * within a user-specific document tree: /users/{userId}/... Access to this tree is controlled
+ * by matching the authenticated user's ID with the {userId} in the path. Publicly browsable
+ * content, like photography services, is stored in a separate top-level collection, /photographyServices.
  *
  * Key Security Decisions:
- * - Default Deny: Access is denied by default; rules only grant specific permissions.
- * - User Scoping: Users are strictly confined to their own data subtree (`/users/{userId}`).
- * - No User Enumeration: Listing documents in the top-level `/users` collection is prohibited.
- * - Public Data is Read-Only: Collections like `/services` and `/gallery_images` are
- *   publicly readable but cannot be modified by clients, preventing vandalism.
+ * - User Isolation: Users can only read and write data within their own /users/{userId} path.
+ * - No User Listing: It is not possible to list all users in the system.
+ * - Public Read, Restricted Writes: The /photographyServices collection is readable by anyone,
+ *   including unauthenticated users, to allow for browsing. However, writes are currently disabled
+ *   pending the addition of an ownership field (e.g., 'authorId') to the data model to identify the creator.
+ * - Relational Integrity: On creation, documents within a user's tree (e.g., a payment card) must
+ *   contain a 'userId' field that matches the {userId} from the path. This ownership link is immutable
+ *   and cannot be changed on update.
  *
  * Denormalization for Authorization:
- * The security model relies on denormalized data to perform fast and secure authorization
- * checks without needing extra `get()` calls. For instance, the path itself in
- * `/users/{userProfileId}/feedbacks/{feedbackId}` establishes ownership, making rules
- * simple and performant.
+ * This ruleset relies on path-based authorization by storing all of a user's private data under a
+ * path containing their unique user ID (e.g., /users/{userId}/purchases/{purchaseId}). This avoids
+ * slow and costly `get()` calls to other documents for authorization checks. The user's ID in the
+ * path is the sole source of truth for ownership.
  *
  * Structural Segregation:
- * The separation of private data (`/users`) from public data (`/services`, `/gallery_images`)
- * is a deliberate choice. This allows for secure and efficient list operations on public
- * collections while guaranteeing the privacy of user-specific documents.
+ * The data model separates private and public data into different top-level collections.
+ * - /users/{userId}/... contains private, user-owned documents.
+ * - /photographyServices contains public documents that are safe to list for all clients.
+ * This structure is more secure and performant than using a single collection with a boolean 'isPublic' flag.
  */
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    // ------------------------------------------------------------------------
     // Helper Functions
-    // --------------------------------
+    // ------------------------------------------------------------------------
 
     /**
-     * Checks if a user is authenticated.
+     * isSignedIn
+     * Checks if the user is authenticated.
      */
     function isSignedIn() {
       return request.auth != null;
     }
 
     /**
-     * Checks if the currently authenticated user's UID matches the provided userId.
-     * This is the primary function for establishing document ownership.
+     * isOwner
+     * Checks if the authenticated user's ID matches the provided userId.
+     * This is the primary function for enforcing user-ownership rules.
      */
     function isOwner(userId) {
       return isSignedIn() && request.auth.uid == userId;
     }
 
     /**
-     * Checks for ownership on an existing document. Used for update and delete
-     * operations to prevent acting on non-existent data.
+     * isExistingOwner
+     * Checks if the document exists and if the authenticated user is the owner.
+     * Used for all update and delete operations to ensure stateful integrity.
      */
     function isExistingOwner(userId) {
       return isOwner(userId) && resource != null;
     }
 
+    /**
+     * isCreatingOwnValidProfile
+     * Validates that a user is creating their own profile and that the profile document's
+     * internal 'id' field correctly matches their authenticated UID.
+     */
+    function isCreatingOwnValidProfile(userId) {
+      return isOwner(userId) && request.resource.data.id == userId;
+    }
+
+    /**
+     * isUpdatingOwnValidProfile
+     * Enforces that the profile's immutable 'id' field is not being changed on update.
+     */
+    function isUpdatingOwnValidProfile() {
+      return request.resource.data.id == resource.data.id;
+    }
+
+    /**
+     * isCreatingOwnValidDocument
+     * Validates that a user is creating a document (e.g., PaymentCard, Purchase) within
+     * their own data tree and that the document's internal 'userId' field correctly
+     * matches their authenticated UID.
+     */
+    function isCreatingOwnValidDocument(userId) {
+      return isOwner(userId) && request.resource.data.userId == userId;
+    }
+
+    /**
+     * isUpdatingOwnValidDocument
+     * Enforces that a document's immutable 'userId' field is not being changed on update.
+     */
+    function isUpdatingOwnValidDocument() {
+      return request.resource.data.userId == resource.data.userId;
+    }
+
+    // ------------------------------------------------------------------------
     // Collection Rules
-    // --------------------------------
+    // ------------------------------------------------------------------------
 
     /**
-     * @description Controls access to user profile documents.
-     * @path /users/{userId}
-     * @allow (create) A new user creating their own profile document.
-     * @allow (get, update, delete) An authenticated user accessing their own profile.
-     * @deny (list) Any user, to prevent enumeration of all application users.
-     * @deny (get, update) A user attempting to access another user's profile.
-     * @principle Restricts access to a user's own data tree and enforces self-creation.
+     * @description Controls access to a user's private profile document.
+     * @path /users/{userId}/profiles/{profileId}
+     * @allow A signed-in user (auth.uid: 'user_abc') can (create) their own profile at /users/user_abc/profiles/profile_123.
+     * @deny A different user (auth.uid: 'user_xyz') is blocked from (get)ting the profile at /users/user_abc/profiles/profile_123.
+     * @principle Restricts access to a user's own data tree and validates relational integrity.
      */
-    match /users/{userId} {
+    match /users/{userId}/profiles/{profileId} {
       allow get: if isOwner(userId);
-      allow list: if false;
-      allow create: if isOwner(userId) && request.resource.data.id == userId;
-      allow update: if isExistingOwner(userId) && request.resource.data.id == resource.data.id;
+      allow list: if isOwner(userId);
+      allow create: if isCreatingOwnValidProfile(userId);
+      allow update: if isExistingOwner(userId) && isUpdatingOwnValidProfile();
       allow delete: if isExistingOwner(userId);
-
-      /**
-       * @description Controls access to a user's feedback subcollection.
-       * @path /users/{userProfileId}/feedbacks/{feedbackId}
-       * @allow (create, list) An authenticated user creating or listing their own feedback.
-       * @deny (create) A user trying to create feedback on behalf of another user.
-       * @deny (get, update, delete) A user trying to access another user's feedback.
-       * @principle Enforces document ownership within a user's private data subtree.
-       */
-      match /feedbacks/{feedbackId} {
-        allow get: if isOwner(userId);
-        allow list: if isOwner(userId);
-        allow create: if isOwner(userId) && request.resource.data.userProfileId == userId;
-        allow update: if isExistingOwner(userId) && request.resource.data.userProfileId == resource.data.userProfileId;
-        allow delete: if isExistingOwner(userId);
-      }
     }
 
     /**
-     * @description Controls access to photography service listings.
-     * @path /services/{serviceId}
-     * @allow (get, list) Any user, including anonymous ones, can view available services.
-     * @deny (create, update, delete) All clients are blocked from modifying service data.
-     * @principle Provides public read access while protecting data integrity. Writes should be handled by a trusted admin SDK.
+     * @description Controls access to a user's private payment card information.
+     * @path /users/{userId}/paymentCards/{paymentCardId}
+     * @allow A signed-in user (auth.uid: 'user_abc') can (list) their own payment cards at /users/user_abc/paymentCards.
+     * @deny A different user (auth.uid: 'user_xyz') is blocked from (create)ing a card at /users/user_abc/paymentCards/card_456.
+     * @principle Enforces strict document ownership for sensitive financial data.
      */
-    match /services/{serviceId} {
-      allow get: if true;
-      allow list: if true;
-      // CRITICAL: Cannot implement owner-only writes. The 'Service' entity is missing an 'ownerId' or 'authorId' field.
-      // To enable client writes, add an ownership field to the Service entity and validate it here.
-      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
-      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
-      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+    match /users/{userId}/paymentCards/{paymentCardId} {
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isCreatingOwnValidDocument(userId);
+      allow update: if isExistingOwner(userId) && isUpdatingOwnValidDocument();
+      allow delete: if isExistingOwner(userId);
     }
 
     /**
-     * @description Controls access to the public image gallery.
-     * @path /gallery_images/{imageId}
-     * @allow (get, list) Any user, including anonymous ones, can view gallery images.
-     * @deny (create, update, delete) All clients are blocked from modifying the gallery.
-     * @principle Provides public read access while protecting data integrity. Writes should be handled by a trusted admin SDK.
+     * @description Controls access to a user's private purchase history.
+     * @path /users/{userId}/purchases/{purchaseId}
+     * @allow A signed-in user (auth.uid: 'user_abc') can (delete) their own purchase record at /users/user_abc/purchases/purchase_789.
+     * @deny An anonymous user is blocked from (get)ting any purchase record.
+     * @principle Restricts access to a user's own data tree and validates relational integrity.
      */
-    match /gallery_images/{imageId} {
+    match /users/{userId}/purchases/{purchaseId} {
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isCreatingOwnValidDocument(userId);
+      allow update: if isExistingOwner(userId) && isUpdatingOwnValidDocument();
+      allow delete: if isExistingOwner(userId);
+    }
+
+    /**
+     * @description Controls access to publicly available photography services.
+     * @path /photographyServices/{serviceId}
+     * @allow Any user, including anonymous ones, can (get) or (list) all photography services.
+     * @deny Any user, including signed-in ones, is blocked from (create)ing a new service.
+     * @principle Allows public read access for browsing but locks down writes for security.
+     */
+    match /photographyServices/{serviceId} {
       allow get: if true;
       allow list: if true;
-      // CRITICAL: Cannot implement owner-only writes. The 'GalleryImage' entity is missing an 'ownerId' or 'authorId' field.
-      // To enable client writes, add an ownership field to the GalleryImage entity and validate it here.
-      allow create: if false; // TODO: Add admin validation once an admin role system is implemented.
-      allow update: if false; // TODO: Add admin validation once an admin role system is implemented.
-      allow delete: if false; // TODO: Add admin validation once an admin role system is implemented.
+      // CRITICAL: Cannot implement owner-only writes. The 'PhotographyService' entity is missing an 'ownerId' or 'authorId' field.
+      allow create: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow update: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
+      allow delete: if false; // TODO: Add owner validation once the schema is updated with an ownership field.
     }
   }
 }
