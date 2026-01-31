@@ -8,9 +8,9 @@
     },
     {
       "id": "gallery-1",
-      "description": "A professional photographer adjusting their camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1707377769044-aa86fcccf5ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoZXIlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzY5ODU0NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photographer professional"
+      "description": "A beautiful Sri Lankan wedding ceremony.",
+      "imageUrl": "https://images.unsplash.com/photo-1627895439210-cd34c856de1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcmklMjBsYW5rYW4lMjB3ZWRkaW5nfGVufDB8fHx8fDE3NzA0MzY5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sri lanka wedding"
     },
     {
       "id": "gallery-2",
@@ -44,9 +44,9 @@
     },
     {
       "id": "about-photographer",
-      "description": "Portrait of a creative photographer.",
-      "imageUrl": "https://images.unsplash.com/photo-1614957453611-d90f8b754f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaG90b2dyYXBoZXIlMjBhcnRpc3R8ZW58MHx8fHwxNzY5ODU0NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "photographer artist"
+      "description": "Portrait of a creative photographer with vintage cameras.",
+      "imageUrl": "https://images.unsplash.com/photo-1520341280432-4740d44e01a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHBob3RvZ3JhcGhlcnxlbnwwfHx8fDE3NzA0MzY4MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photographer creative"
     },
     {
       "id": "feature-wedding",
