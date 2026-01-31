@@ -24,9 +24,14 @@ export default function Header() {
                 </Link>
             ))}
             {user && (
-                 <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
-                    Feedback
-                </Link>
+                 <>
+                    <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
+                        Feedback
+                    </Link>
+                    <Link href="/services" className="text-foreground/70 transition-colors hover:text-foreground">
+                        Packages
+                    </Link>
+                </>
             )}
         </nav>
         <div className="flex flex-1 items-center justify-end">
