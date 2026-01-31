@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container flex flex-col sm:flex-row items-center justify-between gap-4">
         <Logo />
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} LensVivid. All rights reserved.
+          © {new Date().getFullYear()} HIRU. All rights reserved.
         </p>
       </div>
     </footer>

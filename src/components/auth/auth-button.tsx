@@ -18,7 +18,7 @@ export default function AuthButton() {
   const { user, loading, signInWithGoogle, signOut } = useAuth();
 
   if (loading) {
-    return <Skeleton className="h-10 w-24" />;
+    return <Skeleton className="h-10 w-10" />;
   }
 
   if (user) {
@@ -50,9 +50,8 @@ export default function AuthButton() {
   }
 
   return (
-    <Button onClick={signInWithGoogle}>
-      <LogIn className="mr-2 h-4 w-4" />
-      Sign In with Google
+    <Button onClick={signInWithGoogle} variant="outline" size="icon" aria-label="Sign In with Google">
+      <LogIn />
     </Button>
   );
 }

@@ -25,9 +25,9 @@ const features = [
 
 export default function ScrollingFeatureSection() {
   return (
-    <section id="services" className="py-16 md:py-24 bg-background">
+    <section id="services" className="py-16 md:py-24 bg-background overflow-hidden">
       <div className="container space-y-20">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 opacity-0 animate-fade-in-up" >
           <h2 className="font-headline text-4xl md:text-5xl font-bold">Our Services</h2>
           <p className="text-lg text-muted-foreground mt-2">Tailored photography services to meet your needs.</p>
         </div>
@@ -36,7 +36,7 @@ export default function ScrollingFeatureSection() {
           const isReversed = index % 2 !== 0;
 
           return (
-            <div key={feature.title} className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div key={feature.title} className="grid md:grid-cols-2 gap-8 md:gap-12 items-center opacity-0 animate-fade-in-up" style={{ animationDelay: `${200 * (index + 1)}ms` }}>
               <div className={`relative aspect-video ${isReversed ? 'md:order-last' : ''}`}>
                 {image && (
                   <Image
