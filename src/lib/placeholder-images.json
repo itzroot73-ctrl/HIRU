@@ -63,7 +63,7 @@
     {
       "id": "package-basic-wedding",
       "description": "An intimate wedding ceremony with a couple exchanging vows.",
-      "imageUrl": "https://images.unsplash.com/photo-1587271407850-8d438ca9f32f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMHdlZGRpbmd8ZW58MHx8fHwxNzcwMDgzNTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1520854221256-17452cc331bf?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "intimate wedding"
     },
     {
@@ -75,7 +75,7 @@
     {
       "id": "package-premium-wedding",
       "description": "A lavish and grand wedding reception with beautiful lighting.",
-      "imageUrl": "https://images.unsplash.com/photo-1597158223636-9243517e3350?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1521993998533-5c317059c07e?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "lavish wedding"
     },
     {
@@ -105,7 +105,7 @@
     {
       "id": "payment-crypto",
       "description": "A physical representation of a Bitcoin coin.",
-      "imageUrl": "https://images.unsplash.com/photo-1614036954959-53683ab35882?q=80&w=1080&auto=format&fit=crop",
+      "imageUrl": "https://images.unsplash.com/photo-1621406327092-2933de6625b0?q=80&w=1080&auto=format&fit=crop",
       "imageHint": "bitcoin coin"
     }
   ]
