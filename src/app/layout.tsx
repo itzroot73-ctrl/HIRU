@@ -4,7 +4,6 @@ import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
 import './globals.css';
 import { ThemeProvider } from '@/hooks/use-theme';
-import { LanguageProvider } from '@/hooks/use-translation';
 
 export const metadata: Metadata = {
   title: 'HIRU',
@@ -28,16 +27,12 @@ export default function RootLayout({
           defaultTheme="dark"
           storageKey="hira-ui-theme"
         >
-          <LanguageProvider>
-            <FirebaseClientProvider>
-              <MainLayout>{children}</MainLayout>
-              <Toaster />
-            </FirebaseClientProvider>
-          </LanguageProvider>
+          <FirebaseClientProvider>
+            <MainLayout>{children}</MainLayout>
+            <Toaster />
+          </FirebaseClientProvider>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-
-    

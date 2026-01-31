@@ -5,17 +5,14 @@ import { useUser } from '@/firebase';
 import Logo from '@/components/logo';
 import AuthButton from '@/components/auth/auth-button';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { LanguageToggle } from '@/components/language-toggle';
-import { useTranslation } from '@/hooks/use-translation';
 
 export default function Header() {
     const { user } = useUser();
-    const { t } = useTranslation();
 
     const navLinks = [
-        { href: "/#services", label: t('header.services') },
-        { href: "/#gallery", label: t('header.gallery') },
-        { href: "/#about", label: t('header.about') },
+        { href: "/#services", label: "Services" },
+        { href: "/#gallery", label: "Gallery" },
+        { href: "/#about", label: "About" },
     ];
 
   return (
@@ -31,22 +28,21 @@ export default function Header() {
             {user && (
                  <>
                     <Link href="/dashboard" className="text-foreground/70 transition-colors hover:text-foreground">
-                        {t('header.dashboard')}
+                        Dashboard
                     </Link>
                     <Link href="/services" className="text-foreground/70 transition-colors hover:text-foreground">
-                        {t('header.packages')}
+                        Packages
                     </Link>
                     <Link href="/payments" className="text-foreground/70 transition-colors hover:text-foreground">
-                        {t('header.payments')}
+                        Payments
                     </Link>
                     <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
-                        {t('header.feedback')}
+                        Feedback
                     </Link>
                 </>
             )}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
-            <LanguageToggle />
             <ThemeToggle />
             <AuthButton />
         </div>
@@ -54,5 +50,3 @@ export default function Header() {
     </header>
   );
 }
-
-    

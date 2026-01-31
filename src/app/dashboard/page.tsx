@@ -11,11 +11,9 @@ import Image from 'next/image';
 import AuthButton from '@/components/auth/auth-button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import PageLoader from '@/components/layout/page-loader';
-import { useTranslation } from '@/hooks/use-translation';
 
 export default function DashboardPage() {
   const { user, isUserLoading } = useUser();
-  const { t } = useTranslation();
   const dashboardImages = PlaceHolderImages.filter(img => img.id.startsWith('dashboard-'));
 
   if (isUserLoading) {
@@ -44,8 +42,8 @@ export default function DashboardPage() {
       <main className="flex-grow container py-12 md:py-16">
         <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center opacity-0 animate-fade-in-up">
-                <h1 className="text-4xl md:text-5xl font-bold font-headline">{t('dashboard.welcome', { name: firstName })}</h1>
-                <p className="mt-2 text-lg text-muted-foreground">{t('dashboard.description')}</p>
+                <h1 className="text-4xl md:text-5xl font-bold font-headline">Welcome, {firstName}!</h1>
+                <p className="mt-2 text-lg text-muted-foreground">We're glad to have you here. Explore your options or view our work.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-4">
@@ -65,28 +63,28 @@ export default function DashboardPage() {
 
             <Card className="bg-card/60 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
                 <CardHeader>
-                    <CardTitle className="text-center">{t('dashboard.missionTitle')}</CardTitle>
+                    <CardTitle className="text-center">Our Mission: Art in Every Frame</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center text-foreground/80">
                     <p>
-                        {t('dashboard.missionDescription')}
+                        We believe that every photograph is more than just an image; it's a chapter in your story waiting to be told. Our mission is to artfully capture the genuine emotion and fleeting beauty of your most cherished moments. With a blend of creativity and precision, we turn your precious memories into timeless works of art that you can treasure for a lifetime.
                     </p>
                 </CardContent>
             </Card>
 
             <Card className="bg-card/60 opacity-0 animate-fade-in-up" style={{ animationDelay: '500ms' }}>
                 <CardHeader>
-                    <CardTitle className="text-center">{t('dashboard.nextStepsTitle')}</CardTitle>
+                    <CardTitle className="text-center">Next Steps</CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                     <Button asChild size="lg" className="group">
                         <Link href="/services">
-                            {t('dashboard.servicesButton')} <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            Our Service Plans <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </Button>
                      <Button asChild size="lg" variant="outline">
                         <Link href="/payments">
-                            {t('dashboard.paymentsButton')}
+                            Payment Methods
                         </Link>
                     </Button>
                 </CardContent>
@@ -97,5 +95,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-
-    
