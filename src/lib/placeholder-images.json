@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "gallery-1",
+      "description": "Woman in a yellow dress in a field of flowers",
+      "imageUrl": "https://images.unsplash.com/photo-1546961329-78bef0414d7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTgzOTYyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Man standing on a mountain peak",
+      "imageUrl": "https://images.unsplash.com/photo-1576068036336-328de1be1f2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb3VudGFpbiUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3Njk3Njg1MDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain landscape"
+    },
+    {
+      "id": "gallery-3",
+      "description": "City street at night with neon lights",
+      "imageUrl": "https://images.unsplash.com/photo-1506606401543-2e73709cebb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaXR5JTIwbmlnaHR8ZW58MHx8fHwxNzY5Nzg2MzgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city night"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Close up of a dew-covered leaf",
+      "imageUrl": "https://images.unsplash.com/photo-1542913235-1f46ce06443d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuYXR1cmUlMjBtYWNyb3xlbnwwfHx8fDE3Njk4NDgxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature macro"
+    },
+    {
+      "id": "gallery-5",
+      "description": "A classic car on a desert road",
+      "imageUrl": "https://images.unsplash.com/photo-1530642901805-fdb3c28754b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjbGFzc2ljJTIwY2FyfGVufDB8fHx8MTc2OTgxODQzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classic car"
+    },
+    {
+      "id": "gallery-6",
+      "description": "A couple laughing together on a beach",
+      "imageUrl": "https://images.unsplash.com/photo-1623137285582-8a3608b5ff09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb3VwbGUlMjBiZWFjaHxlbnwwfHx8fDE3Njk4NDgxMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "couple beach"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Architectural details of a modern building",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzY5ODQ3ODc1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "gallery-8",
+      "description": "A chef plating a gourmet dish",
+      "imageUrl": "https://images.unsplash.com/photo-1552611052-33e04de081de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb29kJTIwcGhvdG9ncmFwaHl8ZW58MHx8fHwxNzY5ODI4NDc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "food photography"
+    },
+    {
+      "id": "gallery-9",
+      "description": "A musician playing guitar on stage",
+      "imageUrl": "https://images.unsplash.com/photo-1743791022256-40413c5f019b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb25jZXJ0JTIwbXVzaWN8ZW58MHx8fHwxNzY5Nzc1NjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "concert music"
+    },
+    {
+      "id": "about-photographer",
+      "description": "Portrait of a photographer holding a camera",
+      "imageUrl": "https://images.unsplash.com/photo-1607332897173-885f1b27e7a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwaG90b2dyYXBoZXIlMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3MzE5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "photographer portrait"
+    },
+    {
+      "id": "feature-wedding",
+      "description": "A bride and groom at their wedding ceremony",
+      "imageUrl": "https://images.unsplash.com/photo-1606490194859-07c18c9f0968?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2VkZGluZyUyMGNvdXBsZXxlbnwwfHx8fDE3Njk4MzM2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wedding couple"
+    },
+    {
+      "id": "feature-portrait",
+      "description": "A stunning close-up portrait of a woman",
+      "imageUrl": "https://images.unsplash.com/photo-1542513217-0b0eedf7005d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmFzaGlvbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2OTg0ODExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion portrait"
+    },
+    {
+      "id": "feature-event",
+      "description": "A crowd at a vibrant music festival",
+      "imageUrl": "https://images.unsplash.com/photo-1760822396928-16d84eabb94e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxldmVudCUyMGZlc3RpdmFsfGVufDB8fHx8MTc2OTg0ODExNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event festival"
+    }
+  ]
 }
