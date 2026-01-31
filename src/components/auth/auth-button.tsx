@@ -2,6 +2,7 @@
 
 import { useUser, useAuth } from '@/firebase';
 import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import {
@@ -19,11 +20,13 @@ import { toast } from '@/hooks/use-toast';
 export default function AuthButton() {
   const { user, isUserLoading: loading } = useUser();
   const auth = useAuth();
+  const router = useRouter();
 
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
+      router.push('/dashboard');
     } catch (error: any) {
       console.error("Error signing in with Google: ", error);
       toast({
@@ -37,6 +40,7 @@ export default function AuthButton() {
   const handleSignOut = async () => {
     try {
       await signOut(auth);
+      router.push('/');
     } catch (error: any) {
       console.error("Error signing out: ", error);
       toast({

@@ -25,11 +25,14 @@ export default function Header() {
             ))}
             {user && (
                  <>
-                    <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
-                        Feedback
+                    <Link href="/dashboard" className="text-foreground/70 transition-colors hover:text-foreground">
+                        Dashboard
                     </Link>
                     <Link href="/services" className="text-foreground/70 transition-colors hover:text-foreground">
                         Packages
+                    </Link>
+                    <Link href="/feedback" className="text-foreground/70 transition-colors hover:text-foreground">
+                        Feedback
                     </Link>
                 </>
             )}

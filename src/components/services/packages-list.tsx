@@ -100,7 +100,7 @@ export default function PackagesList() {
 
         <Separator className="my-16" />
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div id="payment-info" className="max-w-4xl mx-auto text-center">
              <h3 className="font-headline text-3xl font-bold mb-4">Contact & Payment</h3>
              <p className="text-muted-foreground mb-8">
                 Ready to book or have questions? Get in touch with us! We accept multiple payment methods for your convenience.
@@ -135,5 +135,3 @@ export default function PackagesList() {
     </section>
   );
 }
-
-    
