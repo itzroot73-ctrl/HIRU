@@ -14,8 +14,9 @@ export default function LoadingScreen({ loading }: LoadingScreenProps) {
       }`}
       aria-hidden={!loading}
     >
-      <div className="relative flex items-center justify-center">
-        <Sparkles className="h-24 w-24 text-accent animate-pulse" />
+      <div className="relative flex items-center justify-center h-48 w-48">
+        <div className="absolute h-full w-full rounded-full bg-accent animate-fill-and-fade" />
+        <Sparkles className="h-24 w-24 text-accent-foreground animate-pulse" />
         <span className="sr-only">Loading...</span>
       </div>
     </div>

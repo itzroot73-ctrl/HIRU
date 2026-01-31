@@ -92,11 +92,17 @@ export default {
           'from': { opacity: '0', transform: 'translateY(10px)' },
           'to': { opacity: '1', transform: 'translateY(0)' },
         },
+        'fill-and-fade': {
+          '0%': { transform: 'scale(0.5)', opacity: '0.5' },
+          '50%': { transform: 'scale(1.2)', opacity: '0.2' },
+          '100%': { transform: 'scale(1.5)', opacity: '0' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+        'fill-and-fade': 'fill-and-fade 2s cubic-bezier(0.4, 0, 0.2, 1) infinite',
       },
     },
   },
