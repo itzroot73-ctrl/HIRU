@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useCallback } from 'react';
+import { createContext, useContext, useState, ReactNode, useCallback, useEffect } from 'react';
 import en from '@/lib/i18n/locales/en.json';
 import si from '@/lib/i18n/locales/si.json';
 
@@ -24,6 +24,10 @@ const getNestedValue = (obj: any, path: string) => {
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
 
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   const t = useCallback((key: string, values?: { [key: string]: string }): string => {
     let text = getNestedValue(translations[language], key);
 
@@ -38,7 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     if (values) {
       Object.entries(values).forEach(([valueKey, value]) => {
-        text = text.replace(`{{${valueKey}}}`, value);
+        text = text.replace(new RegExp(`{{${valueKey}}}`, 'g'), value);
       });
     }
 
@@ -59,5 +63,3 @@ export const useTranslation = () => {
   }
   return context;
 };
-
-    
